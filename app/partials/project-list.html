@@ -1,0 +1,28 @@
+<h2 id="heading">Projects</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Name</option>
+        <option value="count">Count</option>
+      </select>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="projects">
+        <li ng-repeat="project in projects | filter:query | orderBy:orderProp"
+            class="project-listing">
+          <a href="#/project/{{ project.id }}">{{ project.name | lowercase }} </a>
+          <span class="count">{{ project.count }} todos</span>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

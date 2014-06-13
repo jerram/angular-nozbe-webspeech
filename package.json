@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "angular-nozbe",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "AngularJS demo, adding notes to nozbe with web voice",
+  "repository": "https://github.com/jerram/angular-nozbe",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
@@ -17,7 +17,7 @@
     "postinstall": "bower install",
 
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000",
+    "start": "http-server ./app/ -a 0.0.0.0 -p 8000",
 
     "pretest": "npm install",
     "test": "karma start test/karma.conf.js",
